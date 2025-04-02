@@ -63,6 +63,19 @@
             position: relative;
             z-index: 1;
         }
+        /* Animación para el mensaje */
+        @keyframes mensajeAnimado {
+            0% { transform: translateY(-50px); opacity: 0; }
+            50% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(50px); opacity: 0; }
+        }
+
+        .mensaje-animado {
+            animation: mensajeAnimado 3s infinite;
+            color: #ff0000;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+            font-family: 'Arial', sans-serif;
+        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -78,6 +91,11 @@
      </script>
 </head>
 <body class="bg-gray-900 text-white">
+    <!-- Mensaje animado -->
+    <div class="mensaje-animado text-4xl font-bold text-center rgb-text py-4">
+        UANHO MARICA!!!
+    </div>
+    
     <!-- Header -->
     <header class="bg-gray-800 p-4 flex justify-between items-center border-b-4 border-indigo-500">
         <h1 class="text-xl font-bold rgb-text">CHK Gaming ¡donde tus sueños se hacen realidad!</h1>
